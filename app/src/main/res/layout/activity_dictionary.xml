@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".DictionaryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linear"
+        android:weightSum="1">
+
+        <AutoCompleteTextView
+            android:id="@+id/simpleAutoCompleteTextView"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="0.6"
+            android:background="#ffffff"
+            android:hint="Search Here"
+            android:padding="15dp"
+            android:textColor="#000000"
+            android:textStyle="bold|italic" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/text"
+            android:layout_weight="0.2"
+            android:background="#fff"
+            android:src="@drawable/ic_search_black_24dp" />
+
+        <ImageView
+            android:id="@+id/voice"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/text"
+            android:layout_weight="0.2"
+            android:background="#4FC3F7"
+            android:src="@drawable/ic_mic" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="450dp"
+        android:layout_height="400dp"
+        android:layout_below="@+id/linear"
+        android:id="@+id/listview"
+        android:layout_alignParentLeft="true"
+        android:background="#fff"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
